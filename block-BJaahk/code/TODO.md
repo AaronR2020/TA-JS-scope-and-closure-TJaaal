@@ -6,7 +6,13 @@ The returned function accepts a sentence. If the sentence contains the `fromWord
 
 ```js
 function censor(fromWord, toWord) {
-  //  Your code goes here
+   return function (str) {
+    if (str.includes(fromWord)) {
+      console.log(str.replace(fromWord, toWord));
+    } else {
+      return;
+    }
+  };
 }
 
 let censorSentence = censor('World', 'Sam');
