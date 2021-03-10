@@ -10,8 +10,10 @@
 **You can use normal for loop for this function**
 
 ```js
-function loop() {
-  // Your code goes here
+function loop(start,test,update,body) {
+    for(let i = start, test(i) , i=update(i)){
+    body(i);
+  }
 }
 
 loop(
