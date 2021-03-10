@@ -14,6 +14,7 @@ console.log(
   window.lastName,
   window.knownAs
 );
+//undefined undefined no one
 ```
 
 2. Guess the output:
@@ -28,6 +29,7 @@ function fullName(a, b) {
 }
 
 console.log(window.fullName(firstName, lastName));
+//last name declared
 ```
 
 3. Make a Execution Context Diagram for the following JS and write the output.
@@ -39,6 +41,7 @@ fucntion addOne(num){
 var one = addOne(0);
 var two = addOne(1);
 console.log(one, two);
+//unexpected identifier
 ```
 
 4. Make a Execution Context Diagram for the following JS and write the output.
@@ -96,6 +99,7 @@ function isAwesome() {
   console.log(awesome);
 }
 isAwesome();
+//undefined
 ```
 
 9. What will be the output of the following
@@ -109,6 +113,7 @@ function isAwesome() {
   console.log(awesome);
 }
 isAwesome();
+//true
 ```
 
 10. What will be the output of the following
