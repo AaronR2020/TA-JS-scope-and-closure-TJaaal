@@ -3,17 +3,17 @@
 
 ```js
 let marks = [34, 45, 56, 76];
-function multiplyArrayByN(arr, cb) {
+function multiplyArrayByN(arr, cb) {//higher order function
   let finalArr = [];
   for (let elm of arr) {
     finalArr.push(cb(elm));
   }
   return finalArr;
 }
-function addFive(n) {
+function addFive(n) { //callback function
   return n + 5;
 }
-function multiplyBy5(n) {
+function multiplyBy5(n) { //callback function
   return n * 5;
 }
 let numbersAddedFive = multiplyArrayByN(marks, addFive);
