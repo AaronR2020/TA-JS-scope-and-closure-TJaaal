@@ -2,7 +2,18 @@
 
 ```js
 function once(cb) {
-  // your code goes here
+   let count = 0;
+  function inner() {
+    if (count == 0) {
+      cb();
+      console.log("you can only call me once!");
+      count++;
+    } else if (count >= 1) {
+      console.log("can't be called twice");
+    }
+  }
+  return inner;
+}
 }
 
 // TEST
