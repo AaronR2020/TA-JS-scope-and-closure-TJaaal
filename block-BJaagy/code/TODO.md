@@ -1,6 +1,21 @@
 1. Create a function by your choice that accepts a callback function.
 
+function calc(num1,num2,cb){
+
+return cb(num1,num2);
+
+}
+function add(a,b){return a+b}
+function sub(a,b){return a-b}
+
+console.log(calc(2,1,add));
+
 2. Create a function by you choice that returns a function reference.
+
+function calc(num1,num2){
+return function add(num1,num2){return num1+num2}
+}
+console.log(calc(2,1,add));
 
 3. Create a higher order function called `map` that takes two inputs:
    - An array of numbers/string/boolean etc
@@ -9,7 +24,18 @@
 Have `map` return a new array filled with values that are the result of the 'callback' function on each element of the input array.
 
 ```js
-// Your code goes here
+function map(arr,cb){
+  return cb(arr)
+}
+
+function sqr(arr){
+  var final=[]
+   arr.map(function(i){
+    final.push(i*i);
+  });
+  return final;
+}
+console.log(map([1,2,3],sqr))
 
 // Test Your Code
 function multiplyByTwo(n) {
@@ -18,13 +44,18 @@ function multiplyByTwo(n) {
 map([1, 2, 3, 4, 5], multiplyByTwo); //-> [2,4,6,8,10]
 multiplyByTwo(1); //-> 2
 multiplyByTwo(2); //-> 4
+console.log(multiplyByTwo(1));
+console.log(multiplyByTwo(2));
+
 ```
 
 4. Create a higher-order function called `forEach` taht takes an array and a callback, and runs the callback on each element of the array. `forEach` does not return anything.
 
 ```js
 // Your code goes here
-
+function forEach(arr,cb){
+  return cb(arr)
+}
 // Test Your Code
 let alphabet = '';
 let letters = ['a', 'b', 'c', 'd'];
